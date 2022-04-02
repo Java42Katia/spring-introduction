@@ -4,13 +4,18 @@ import java.util.Arrays;
 
 import org.springframework.stereotype.Service;
 
-@Service("+")
+@Service
 public class CalculatorAddService implements CalculatorService {
 
 	@Override
 	public double calculate(double[] operands) {
 		
 		return Arrays.stream(operands).sum();
+	}
+
+	@Override
+	public String getType() {
+		return "+";
 	}
 
 }

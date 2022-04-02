@@ -25,7 +25,7 @@ public class CalculatorController {
 		try {
 			System.out.println(service.calculate(request.operands));
 			return "calculation has been done - see logs";
-		} catch (Exception e) {
+		} catch (IllegalArgumentException e) {
 			System.out.println(e.getMessage());
 			return e.getMessage();
 		}
